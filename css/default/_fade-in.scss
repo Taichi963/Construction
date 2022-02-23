@@ -1,0 +1,19 @@
+.left-fade {
+    transition: all 2s;
+    opacity: 0;
+    transform: translateX(-30%);
+
+    &.fade-in {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.right-fade {
+    opacity: 0;
+    transform: translateX(30%);
+    transition: all 2s;
+    &.fade-in {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}

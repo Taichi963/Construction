@@ -1,0 +1,157 @@
+.header {
+    height: 100px;
+    align-items: center;
+    .pc-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+
+        @include tab {
+            display: none;
+        }
+    }
+
+    &-logo {
+        img {
+            width: 137px;
+            height: 58px;
+        }
+    }
+    .nav {
+        font-size: 18px;
+        &-list {
+            display: flex;
+            li {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+// header End
+/* ==================
+
+/* ===================
+=========== モバイルメニュー =============
+================================*/
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width:50%;
+    height: 100vh;/*ナビの高さ*/
+	background:rgba(0, 0, 0, 0.5);
+    /*動き*/
+	transition: all 0.6s;
+
+    &.panelactive{
+    right: 0;
+
+        & #g-nav-list{
+            /*ナビの数が増えた場合縦スクロール*/
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            height: 100vh;/*表示する高さ*/
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+    ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:30%;
+    left:25%;
+    transform: translate(-50%,-50%);
+
+    @include sp {
+        left: 20%;
+    }
+
+        & li {
+        list-style: none;
+        text-align: center;
+
+            a {
+                color: $cWhite;
+                text-decoration: none;
+                padding:10px;
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: bold;
+                font-size: 30px;
+
+                @include tab {
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                @include sp {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+    display: none;
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:20px;
+	right: 20px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+    @include tab {
+        display: block;
+    }
+    span{
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: $cBlack;
+        width: 45%;
+
+        &:nth-of-type(1) {
+            top:15px;
+        }
+        &:nth-of-type(2) {
+            top:23px;
+        }
+        &:nth-of-type(3) {
+            top:31px;
+        }
+    }
+
+    &.active {
+        span {
+            background-color: $cWhite;
+            &:nth-of-type(1) {
+                top: 18px;
+                left: 18px;
+                transform: translateY(6px) rotate(-45deg);
+                width: 30%;
+            }
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+            &:nth-of-type(3){
+                top: 30px;
+                left: 18px;
+                transform: translateY(-6px) rotate(45deg);
+                width: 30%;
+            }
+        }
+    }
+}

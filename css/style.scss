@@ -1,0 +1,191 @@
+@import '../css/default/default.scss';
+@import '../css/mixin';
+@import '../css/default/_header';
+@import '../css/default/_footer';
+@import '../css/default/_fade-in';
+.wrapper {
+    height: 80vh;
+    background-image: url(../img/main.png);
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include tab {
+        height: 50vh;
+    }
+
+    .top-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+
+        @include pc {
+            white-space: nowrap;
+        }
+        @include tab {
+            font-size: 24px;
+        }
+    }
+}
+/* ======================
+    news Start
+======================*/
+
+.news {
+    width: 50%;
+
+    @include tab {
+        width: 90%;
+    }
+    &-title {
+        padding: 89px 0;
+
+        @include sp {
+            padding: 30px 0;
+        }
+    }
+    .news-list {
+        padding: 0;
+        @include tab {
+            width: 80%;
+        }
+        @include sp {
+            width: 100%;
+        }
+        .news-item {
+            margin-bottom: 28px;
+            padding-bottom: 30px;
+            border-bottom: $Border;
+
+            @include sp {
+                padding-bottom: 10px;
+            }
+            time {
+                font-size: 17px;
+            }
+            span {
+                font-size: 11px;
+                margin: 0 30px;
+                padding: 5px 8px;
+                border: 1px solid #000;
+
+                @include sp {
+                    width: 90px;
+                    margin: 0;
+                    padding: 5px 20px;
+                    margin: 10px 0;
+                }
+            }
+            a {
+                @include sp {
+                padding-bottom: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            }
+        }
+    }
+}
+
+/* ===================
+    news End
+======================*/
+
+/* ===================
+    case Start
+======================*/
+.case {
+    padding: 180px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include sp {
+        padding-top: 40px;
+    }
+
+    &-title {
+        padding-bottom: 100px;
+    }
+    &-image-item {
+        width: 430px;
+        height: 282px;
+
+        @include tab {
+            width: 100%;
+            height: auto ;
+        }
+    }
+    &-items {
+        display: flex;
+        max-width: 100%;
+        justify-content: space-between;
+
+        @include tab {
+            flex-direction: column;
+        }
+    }
+    &-item {
+        width: 40%;
+        text-align: center;
+        margin: 0 auto;
+        @include tab {
+            width: 90%;
+        }
+        &:first-child {
+            margin-bottom: 52px;
+        }
+    }
+    &-item-title {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    &-text {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    &-img {
+        img {
+            width: 298px;
+            height: 46px;
+            margin: 0 auto;
+        }
+    }
+    &-btn {
+        border: $Border;
+        width: 202px;
+        height: 50px;
+        margin: 80px auto 0;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+    /* ===================
+    case End
+    ======================*/
+    /* ===================
+    company Start
+    ======================*/
+
+    .company {
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+        @include sp {
+            flex-direction: column;
+            width: 100%;
+        }
+        &-item {
+            transition: all 0.6s;
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}
+/* ===================
+    company End
+======================*/

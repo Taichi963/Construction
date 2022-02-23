@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="蒼乃建設公式サイト">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼乃建設</title>
+    <link rel="stylesheet" href="loader.css">
+    <script src="js/libs/pace.js"></script>
+    <script>
+        Pace.on('start', function() {
+            const paceProgrressInner = document.querySelector('.pace-progress-inner');
+            paceProgrressInner.innerHTML = '<div></div><div></div>';
+        });
+    </script>
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="global-container">
+
+        <div class="wrapper">
+            <header class="header">
+                <div class="pc-header">
+                    <h1 class="header-logo"><img src="img/header_logo.png" alt="蒼乃建設"></h1>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li><a href="#">企業理念</a></li>
+                            <li><a href="#">施工事例</a></li>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="sp-nav-wrapper">
+                <div class="openbtn"><span></span><span></span><span></span></div>
+                <nav id="g-nav">
+                    <div id="g-nav-list">
+                        <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                        <ul>
+                            <li><a href="#">企業理念</a></li>
+                            <li><a href="#">施工実績</a></li>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+            <h2 class="top-text">
+            街を作る。未来を作る。
+        </h2>
+        </div>
+        <main>
+            <section class="news">
+                <!-- news -->
+                <h2 class="news-title section-title">お知らせ</h2>
+                <ul class="news-list">
+                    <li class="news-item"><a href="#"><time>2020.11.17</time><span>お知らせ</span>本社打合せ室が完成しました。</a></li>
+                    <li class="news-item"><a href="#"><time>2020.11.10</time><span>お知らせ</span>【メディア掲載】住宅雑誌 2020年11月号</a></li>
+                    <li class="news-item"><a href="#"><time>2020.11.01</time><span>お知らせ</span>ホームページが完成しました。</a></li>
+                </ul>
+            </section><!-- news -->
+            <section class="case">
+                <!-- case -->
+                <h2 class="case-title section-title">施工事例</h2>
+                <div class="case-wrapper">
+                    <div class="case-items">
+                        <section class="case-item left-fade">
+                            <img class="case-image-item" src="img/building1.png" alt="">
+                            <h3 class="case-item-title">M様邸新築工事</h3>
+                            <p class="case-text">埼玉県</p>
+                            <a href="#" class="case-img">
+                                <img src="img/more.png" alt="">
+                            </a>
+                        </section>
+                        <section class="case-item right-fade">
+                            <img class="case-image-item" src="img/building2.png" alt="">
+                            <h3 class="case-item-title">スカイビル</h3>
+                            <p class="case-text">東京都</p>
+                            <a href="#" class="case-img">
+                                <img src="img/more.png" alt="">
+                            </a>
+                        </section>
+                    </div><!-- case-items -->
+                </div>
+                <div class="case-btn">
+                    <a href="#">施工実績一覧</a>
+                </div>
+            </section><!-- case -->
+            <section class="company">
+                <div class="company-item left-fade">
+                    <a href="#"><img src="img/company.png" alt="企業理念"></a>
+                </div>
+                <div class="company-item">
+                    <a href="#"><img src="img/recruit.png" alt="企業理念"></a>
+                </div>
+                <div class="company-item right-fade">
+                    <a href="#"><img src="img/contact.png" alt="企業理念"></a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <!-- footer -->
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <img src="img/footer_logo (1).png" alt="">
+                </div>
+                <nav class="footer-nav">
+                    <ul class="nav-lists">
+                        <li><a class="nav-item" href="#">企業理念</a></li>
+                        <li><a class="nav-item" href="#">施工事例</a></li>
+                        <li><a class="nav-item" href="#">採用情報</a></li>
+                        <li><a class="nav-item" href="#">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="copy-right" style="color: white">
+                <p>©Taichi Shimizu 2022/1/5</p>
+            </div>
+        </footer><!-- footer -->
+    </div>
+    <script src="js/libs/jqery-min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

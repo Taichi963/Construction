@@ -1,0 +1,62 @@
+/* ===================
+    footer Start
+======================*/
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: $cBlack;
+
+    &-inner {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 28px;
+        padding-bottom: 60px;
+
+        @include tab {
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        @include sp {
+            flex-direction: column;
+        }
+    }
+    &-logo {
+        width: 96px;
+        @include sp {
+            margin: 0px auto 10px;
+        }
+    }
+
+    &-nav {
+        .nav-lists {
+            display: flex;
+            @include sp {
+                flex-direction: column;
+                padding-left: 0;
+            }
+            li {
+                    @include sp {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .nav-item {
+                padding-left: 60px;
+                color: $cWhite;
+
+                @include sp {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .copy-right {
+        text-align: center;
+        font-size: 12px;
+        padding-bottom: 12px;
+    }
+}
+/* ===================
+    footer End
+======================*/
